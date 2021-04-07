@@ -1,0 +1,24 @@
+li {
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+}
+
+body {
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+}
+
+.section {
+  padding-top: 5px;
+  margin-bottom: 10px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #d4d1d1;
+  box-shadow: 0 4px 20px 2px rgb(0 0 0 / 11%);
+}
+
+.mainText {
+  color: #b18787;
+}
