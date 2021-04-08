@@ -1,4 +1,5 @@
 import styles from './Find.module.css';
+import PropTypes from 'prop-types';
 
 const Find = ({ value, newFilter }) => {
   return (
@@ -16,6 +17,11 @@ const Find = ({ value, newFilter }) => {
       </label>
     </form>
   );
+};
+
+Find.propTypes = {
+  value: PropTypes.string,
+  newFilter: PropTypes.func.isRequired,
 };
 
 export default Find;

@@ -1,5 +1,5 @@
-// import shortid from 'shortid';
 import styles from './ContactList.module.css';
+import PropTypes from 'prop-types';
 import ContactItem from '../ContactItem';
 
 const ContactList = ({ list, onDeleteContact }) => {
@@ -18,6 +18,11 @@ const ContactList = ({ list, onDeleteContact }) => {
       })}
     </ul>
   );
+};
+
+ContactList.propTypes = {
+  onDeleteContact: PropTypes.func.isRequired,
+  list: PropTypes.array.isRequired,
 };
 
 export default ContactList;

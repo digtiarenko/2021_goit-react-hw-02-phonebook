@@ -1,7 +1,6 @@
 import { Component } from 'react';
 import styles from './InputForm.module.css';
-
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 
 class InputForm extends Component {
   state = {
@@ -14,12 +13,10 @@ class InputForm extends Component {
     this.setState({
       [name]: value,
     });
-    console.log(this.state);
   };
 
   handleSubmit = event => {
     event.preventDefault();
-    console.log(this.state);
 
     this.props.onSubmit(this.state);
 
@@ -31,7 +28,7 @@ class InputForm extends Component {
 
   render() {
     return (
-      <form className="section" action="">
+      <form className="section" action="" onSubmit={this.handleSubmit}>
         <label htmlFor="">
           <p className="subHeader">Add Your Contact Here</p>
           <input
@@ -57,11 +54,7 @@ class InputForm extends Component {
             title="Номер телефона должен состоять из 11-12 цифр и может содержать цифры, пробелы, тире, пузатые скобки и может начинаться с +"
             required
           />
-          <button
-            className={styles.btn}
-            type="submit"
-            onClick={this.handleSubmit}
-          >
+          <button className={styles.btn} type="submit">
             Add contact
           </button>
         </label>
@@ -69,5 +62,9 @@ class InputForm extends Component {
     );
   }
 }
+
+InputForm.propTypes = {
+  onSubmit: PropTypes.func.isRequired,
+};
 
 export default InputForm;
