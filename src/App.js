@@ -56,7 +56,7 @@ class App extends Component {
       <>
         <h1>Phonebook</h1>
         <InputForm onSubmit={this.addContact} />
-        <Find value={this.state.name} newFilter={this.changeFilter} />
+        <Find value={this.state.filter} newFilter={this.changeFilter} />
         <h2>Contacts</h2>
         <ContactList
           list={filteredContacts}

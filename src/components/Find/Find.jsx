@@ -20,7 +20,7 @@ const Find = ({ value, newFilter }) => {
 };
 
 Find.propTypes = {
-  value: PropTypes.string,
+  value: PropTypes.string.isRequired,
   newFilter: PropTypes.func.isRequired,
 };
 
